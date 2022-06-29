@@ -1,0 +1,1 @@
+export { CatCodeImage } from './components/cat-code-image';

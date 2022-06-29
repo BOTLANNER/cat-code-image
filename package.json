@@ -1,0 +1,41 @@
+{
+  "name": "cat-code-image",
+  "version": "0.0.1",
+  "description": "A NPM package for a web component that displays an image of a cat for a HTTP status code",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"directories": {
+		"test": "tests"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+  "scripts": {
+		"clean": "npx rimraf dist docs",
+		"build": "npm run clean && npm run docs && tsc",
+		"docs": "npx web-component-analyzer ./components/**/*.{js,ts} --outFile README.md",
+		"test": "echo \"Error: no test specified\" && exit 0",
+		"prepublish": "npm run build",
+		"publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BOTLANNER/cat-code-image.git"
+  },
+  "keywords": [],
+  "author": "B0TLANNER",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BOTLANNER/cat-code-image/issues"
+  },
+  "homepage": "https://github.com/BOTLANNER/cat-code-image#readme",
+	"dependencies": {
+		"lit": "^2.2.0"
+	},
+	"devDependencies": {
+		"@webcomponents/webcomponentsjs": "^2.6.0",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.5.5",
+		"web-component-analyzer": "^1.1.6"
+	}
+}
